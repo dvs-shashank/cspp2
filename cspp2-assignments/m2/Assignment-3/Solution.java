@@ -33,7 +33,7 @@ public class Solution {
 	static long power(final int b, final int e)
 	{
 		if(e != 0) {
-			return (b * power(b, e-1));
+			return (b * power(b, e - 1));
 		}
 		else {
 			return 1;
