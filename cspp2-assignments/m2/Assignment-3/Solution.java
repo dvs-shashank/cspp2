@@ -22,7 +22,7 @@ public final class Solution {
         System.out.println(result);
 	}
 	/**
-	 * { function_description }
+	 * { function_description }.
 	 *
 	 * @param      b     { parameter_description }.
 	 * @param      e     { parameter_description }.
@@ -35,5 +35,5 @@ public final class Solution {
 		} else {
 			return 1;
 		}
-	} 
+	}
 }
