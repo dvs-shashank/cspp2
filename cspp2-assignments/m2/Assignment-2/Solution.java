@@ -22,11 +22,11 @@ public class Solution {
 		rootsOfQuadraticEquation(a, b, c);
 	}
 	/**
-	 * { function_description }
+	 * { function_description }.
 	 *
-	 * @param      a     { parameter_description }
-	 * @param      b     { parameter_description }
-	 * @param      c     { parameter_description }
+	 * @param      a     { parameter_description }.
+	 * @param      b     { parameter_description }.
+	 * @param      c     { parameter_description }.
 	 */
 	static void rootsOfQuadraticEquation(int a, int b, int c) {
 		double root1 = (-b + Math.sqrt((b * b) - 4 * a * c)) / (2 * a);
