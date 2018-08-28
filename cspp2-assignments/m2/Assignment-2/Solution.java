@@ -24,7 +24,7 @@ public final class Solution {
         int a = scan.nextInt();
         int b = scan.nextInt();
         int c = scan.nextInt();
-        rootsOfQuadraticEquation(a, b, c);
+        findRoots(a, b, c);
     }
     /**
      * { function_description }.
@@ -33,7 +33,7 @@ public final class Solution {
      * @param      b     { parameter_description }.
      * @param      c     { parameter_description }.
      */
-    static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
+    static void findRoots(final int a, final int b, final int c) {
         int two = 2;
         double d = ((b * b) - FOUR * a * c);
         double root1 = (-b + Math.sqrt(d)) / (two * a);
