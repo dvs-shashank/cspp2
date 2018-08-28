@@ -34,6 +34,6 @@ public final class Solution {
 		double d = ((b * b) - four * a * c);
 		double root1 = (-b + Math.sqrt(d)) / (two * a);
 		double root2 = (-b - Math.sqrt(d)) / (two * a);
-		System.out.print(root1+ " " +root2);
+		System.out.print(root1 + " " + root2);
 	}
 }
