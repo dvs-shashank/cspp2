@@ -4,9 +4,16 @@ import java.util.Scanner;
  */
 public class Solution {
 	/**
-	 * main method
+	 * Constructs the object.
+	 */
+	Solution()
+	{
+
+	}
+	/**
+	 * main method.
 	 *
-	 * @param      args  The arguments
+	 * @param      args  The arguments.
 	 */
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -22,7 +29,7 @@ public class Solution {
 	 * @param      b     { parameter_description }
 	 * @param      c     { parameter_description }
 	 */
-	static void rootsOfQuadraticEquation(int a, int b,int c){
+	static void rootsOfQuadraticEquation(int a, int b, int c){
 		double root1 = (-b + Math.sqrt((b * b) - 4 * a * c)) / (2 * a);
 		double root2 = (-b - Math.sqrt((b * b) - 4 * a * c)) / (2 * a);
 		System.out.print(root1+ " " +root2);
