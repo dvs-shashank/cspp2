@@ -4,6 +4,9 @@ import java.util.Scanner;
  * Class for solution.
  */
 public final class Solution {
+    /**
+     * { var_description }.
+     */
     public static final int FOUR = 4;
     /**
     * Constructs the object.
@@ -30,7 +33,7 @@ public final class Solution {
      * @param      b     { parameter_description }.
      * @param      c     { parameter_description }.
      */
-    static void rootsOfQuadraticEquation(int a, int b, int c) {
+    static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
         int two = 2;
         double d = ((b * b) - FOUR * a * c);
         double root1 = (-b + Math.sqrt(d)) / (two * a);
@@ -38,3 +41,5 @@ public final class Solution {
         System.out.print(root1 + " " + root2);
     }
 }
+
+
