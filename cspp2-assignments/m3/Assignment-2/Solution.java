@@ -1,11 +1,16 @@
-
 import java.util.Scanner;
 /**
  * Class for solution.
  */
 public final class Solution {
-	public static int SEVEN = 7;
-	public static int TEN = 10;
+	/**
+	 * { var_description }.
+	 */
+	public static final int SEVEN = 7;
+	/**
+	 * { var_description }.
+	 */
+	public static final int TEN = 10;
 	/**
 	 * Constructs the object.
 	 */
