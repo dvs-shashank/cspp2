@@ -17,17 +17,17 @@ public final class Solution {
 	 *
 	 * @return     Number of 7.
 	 */
-	public static int count7(int n) {
+	public static int count7(final int n) {
 		int count = 0;
 		//int temp = 0;
-		for (int i = 1;i <= n ;i++ ) {
-			int temp_i = i;
-			while(temp_i > 1){
-				int r = temp_i % 10;
+		for (int i = 1; i <= n ; i++) {
+			int temp = i;
+			while (temp > 1){
+				int r = temp % 10;
 				if (r == 7) {
 					count += 1;
 				}
-				temp_i = temp_i / 10;
+				temp = temp / 10;
 			}
 		}
 		return count;
@@ -39,12 +39,10 @@ public final class Solution {
  *
  * @param      args  The arguments
  */
-    public static void main(String[] args) {
-
+    public static void main(final String[] args) {
         Scanner s=new Scanner(System.in);      
         int n = s.nextInt();
         int res = count7(n);
-       	System.out.println(res);
-        
+       	System.out.println(res);       
     }
 }
