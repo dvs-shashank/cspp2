@@ -20,7 +20,7 @@ public final class Solution {
 	public static int count7(final int n) {
 		int count = 0;
 		//int temp = 0;
-		for (int i = 1; i <= n ; i++) {
+		for (int i = 1; i <= n; i++) {
 			int temp = i;
 			while (temp > 1){
 				int r = temp % 10;
@@ -40,9 +40,9 @@ public final class Solution {
  * @param      args  The arguments
  */
     public static void main(final String[] args) {
-        Scanner s=new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);      
         int n = s.nextInt();
         int res = count7(n);
-       	System.out.println(res);       
+       	System.out.println(res);
     }
 }
