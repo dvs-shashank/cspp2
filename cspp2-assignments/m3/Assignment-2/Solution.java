@@ -4,6 +4,8 @@ import java.util.Scanner;
  * Class for solution.
  */
 public final class Solution {
+	public static int SEVEN = 7;
+	public static int TEN = 10;
 	/**
 	 * Constructs the object.
 	 */
@@ -22,12 +24,12 @@ public final class Solution {
 		//int temp = 0;
 		for (int i = 1; i <= n; i++) {
 			int temp = i;
-			while (temp > 1){
-				int r = temp % 10;
-				if (r == 7) {
+			while (temp > 1) {
+				int r = temp % TEN;
+				if (r == SEVEN) {
 					count += 1;
 				}
-				temp = temp / 10;
+				temp = temp / TEN;
 			}
 		}
 		return count;
@@ -40,7 +42,7 @@ public final class Solution {
  * @param      args  The arguments
  */
     public static void main(final String[] args) {
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int res = count7(n);
        	System.out.println(res);
