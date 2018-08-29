@@ -11,10 +11,10 @@ public final class Solution {
      *
      * @return     { description_of_the_return_value }.
      */
-    public static final int gcd(final int n1,final int n2) {
+    public static int gcd(final int n1, final int n2) {
         int gcd = 1;
         int min = 0;
-        if(n1 > n2) {
+        if (n1 > n2) {
             min = n2;
         } else {
             min = n1;
@@ -38,13 +38,15 @@ public final class Solution {
      * @param      args  The arguments.
      */
     public static void main(final String[] args) {
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
         int gcd = gcd(n1,n2);
         System.out.println(gcd);
     }
 }
+
+
 
 
 
