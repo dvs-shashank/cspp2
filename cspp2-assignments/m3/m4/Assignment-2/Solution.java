@@ -10,16 +10,18 @@ public final class Solution {
      * @param      m     { parameter_description }
      * @param      n     { parameter_description }
      */
+    public static final Scanner s = new Scanner(System.in);
     public static int[][] readMatrix(final int m, final int n) {
-        Scanner s = new Scanner(System.in);
+        // Scanner s = new Scanner(System.in);
         int a[][] = new int[m][n];
         for(int i=0; i < n; i++) {
             for(int j=0; j < n; j++) {
-                a[i][j] = s.nextInt();
+                int val = s.nextInt();
+                a[i][j] = val;
             }
+            s.nextLine();
         }
         return a;
-
     }
     /**
      * Constructs the object.
@@ -33,7 +35,7 @@ public final class Solution {
      * @param      args  The arguments.
      */
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
+        
         int m1 = s.nextInt();
         int n1 = s.nextInt();
         int[][] matrix1 = readMatrix(m1, n1);
@@ -52,7 +54,10 @@ public final class Solution {
         }
         for (int i = 0; i < m1; i++) {
             for(int j =0; j < n1; j++) {
-                System.out.print(res[i][j]+" ");
+                System.out.print(res[i][j]);
+                if(j < n1 - 1){
+                    System.out.print(" ");
+                }
             }
             System.out.println();
         }
