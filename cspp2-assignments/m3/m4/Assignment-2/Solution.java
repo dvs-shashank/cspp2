@@ -46,20 +46,20 @@ public final class Solution {
         if ( m1 == m2 && n1 == n2) {
             for(int i=0; i < m1; i++) {
                 for(int j=0; j < n1; j++) {
-                res[i][j] = matrix1[i][j] + matrix2[i][j];
-            }
-        }
-        } else {
-            System.out.println("not possible");
-        }
-        for (int i = 0; i < m1; i++) {
-            for(int j =0; j < n1; j++) {
-                System.out.print(res[i][j]);
-                if(j < n1 - 1){
-                    System.out.print(" ");
+                    res[i][j] = matrix1[i][j] + matrix2[i][j];
                 }
             }
-            System.out.println();
+            for (int i = 0; i < m1; i++) {
+                for(int j =0; j < n1; j++) {
+                    System.out.print(res[i][j]);
+                    if(j < n1 - 1){
+                        System.out.print(" ");
+                    }
+                }
+                System.out.println();
+            }
+        } else {
+            System.out.println("not possible");
         }
     }
 }
