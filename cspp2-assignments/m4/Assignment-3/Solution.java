@@ -41,8 +41,8 @@ public final class Solution {
         sc.nextLine();
         for (int i = 0; i < n; i++) {
             String s = sc.nextLine();
-            String res = binaryToDecimal(s);//Write binaryToDecimal function
-            System.out.println(res); 
+            String res = binaryToDecimal(s); //Write binaryToDecimal function
+            System.out.println(res);
         }
     }
 
