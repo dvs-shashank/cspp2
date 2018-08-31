@@ -12,13 +12,15 @@ public final class Solution {
 
 	}
 	/**
-	 * { function that reverses the string }.
+	 * { reversing the string. }.
+	 *
+	 * @param      str   The string.
 	 *
 	 * @return     { reversed string }.
 	 */
-	public static String reverseString(String str) {
+	public static String reverseString(final String str) {
 		String rev = "";
-		for (int i = str.length() -1; i >= 0; i--) {
+		for (int i = str.length() - 1; i >= 0; i--) {
 			rev += str.charAt(i);
 		}
 		return rev;
