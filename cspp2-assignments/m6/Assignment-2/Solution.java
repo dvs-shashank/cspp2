@@ -6,7 +6,13 @@ import java.util.Scanner;
  * @author : shashank.
  */
 final class Solution {
+    /**
+     * hundred global variable int type.
+     */
     public static final int HUNDRED = 100;
+    /**
+     * hundred global variable double type.
+     */
     public static final double HUNDREDS = 100.0;
     /**
      * Constructs the object.
