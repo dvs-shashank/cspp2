@@ -30,7 +30,7 @@ final class Solution {
      *
      * @return     Matrix of the rounded elements.
      */
-    static int[][] roundHundred(final int[][] a, final int rows, 
+    static int[][] roundHundred(final int[][] a, final int rows,
         final int columns) {
     int[][] rounded = new int[rows][columns];
     for (int i = 0; i < rows; i++) {
