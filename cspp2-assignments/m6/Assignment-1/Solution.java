@@ -18,10 +18,10 @@ public final class Solution {
      * @param      n     n value.
      */
     static void oddComposites(final int n) {
-	for (int i = 2; i < n; i++) {
-        if (i %2 != 0) {
+    for (int i = 2; i < n; i++) {
+        if (i % 2 != 0) {
             int flag = 0;
-            for (int j =2; j < i; j++) {
+            for (int j = 2; j < i; j++) {
                 if (i % j == 0 && flag == 0) {
                     System.out.println(i);
                     flag += 1;
@@ -40,4 +40,8 @@ public final class Solution {
         oddComposites(n);
     }
 }
+
+
+
+
 
