@@ -6,6 +6,8 @@ import java.util.Scanner;
  * @author : shashank.
  */
 final class Solution {
+    public static final int HUNDRED = 100;
+    public static final double HUNDREDS = 100.0;
     /**
      * Constructs the object.
      */
@@ -24,12 +26,12 @@ final class Solution {
      */
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
     int[][] rounded = new int[rows][columns];
-	for(int i =0; i < rows; i++) {
-		for(int j =0; j <columns; j++) {
-			rounded[i][j] = (int) Math.round(a[i][j]/100.0) * 100;
-		}
-	}
-	return rounded;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < columns; j++) {
+            rounded[i][j] = (int) Math.round(a[i][j] / HUNDREDS) * HUNDRED;
+        }
+    }
+    return rounded;
     }
     /**
      * Main function.
