@@ -10,7 +10,7 @@ class InputValidator {
 	/**
 	 * Constructs the object.
 	 *
-	 * @param      input  The input.
+	 * @param      str   The string.
 	 */
 	InputValidator(final String str) {
 		this.input = str;
@@ -33,7 +33,7 @@ class InputValidator {
  */
 public final class Solution {
 	/**
-	 * main method. 
+	 * main method.
 	 * @param      args  args[].
 	 */
 	public static void main(final String[] args) {
