@@ -37,6 +37,12 @@ class InputValidator {
  */
 public final class Solution {
     /**
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
+    /**
      * main method.
      * @param      args  args[].
      */
@@ -47,5 +53,9 @@ public final class Solution {
         System.out.println(i.validateData());
     }
 }
+
+
+
+
 
 
