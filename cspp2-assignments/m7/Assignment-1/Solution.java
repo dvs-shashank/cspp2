@@ -3,6 +3,9 @@ import java.util.Scanner;
  * Class for input validator.
  */
 class InputValidator {
+    /**
+     * Six global variable.
+     */
     public static final int SIX = 6;
     /**
      * input object variable.
