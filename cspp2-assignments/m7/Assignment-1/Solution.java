@@ -12,8 +12,8 @@ class InputValidator {
 	 *
 	 * @param      input  The input.
 	 */
-	InputValidator(final String input) {
-		this.input = input;
+	InputValidator(final String str) {
+		this.input = str;
 	}
 	/**
 	 * Function which is used for validating.
@@ -33,8 +33,7 @@ class InputValidator {
  */
 public final class Solution {
 	/**
-	 * main method.
-	 * 
+	 * main method. 
 	 * @param      args  args[].
 	 */
 	public static void main(final String[] args) {
