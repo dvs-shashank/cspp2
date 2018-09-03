@@ -31,7 +31,7 @@ class InputValidator {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
 	/**
 	 * main method.
 	 * 
@@ -42,7 +42,5 @@ public class Solution {
     	String input = s.next();
     	InputValidator i = new InputValidator(input);
     	System.out.println(i.validateData());
-
     }
-
 }
