@@ -4,7 +4,7 @@ import java.util.Scanner;
  * class List.
  */
 public class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
     /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -143,7 +143,7 @@ public class List {
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index >= 0 && index < size){
+        if (index >= 0 && index < size){
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
@@ -172,9 +172,9 @@ public class List {
      *
      * @return     { index value }.
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
-        if(index > -1 && index < size){
+        if (index > -1 && index < size) {
             return list[index];
         }
         return -1;
@@ -209,9 +209,9 @@ public class List {
         // Replace the code below
         String str = "[";
         String cmm = ",";
-        for (int i = 0; i < size ; i++) {
+        for (int i = 0; i < size; i++) {
             str += Integer.toString(list[i]);
-            if(i < size - 1){
+            if (i < size - 1) {
                 str += cmm;
             }
         }
@@ -252,7 +252,7 @@ public class List {
     public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size ; i++) {
-            if(list[i] == item){
+            if (list[i] == item) {
                 return i;
             }
         }
@@ -263,7 +263,7 @@ public class List {
      *
      * @param      args  The arguments.
      */
-	public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -306,5 +306,5 @@ public class List {
                 break;
             }
         }
-	}
+    }
 }
