@@ -4,6 +4,18 @@ import java.util.Scanner;
  * class List.
  */
 public class List {
+    /**
+     * value of ten.
+     */
+    public static final int TEN = 10;
+    /**
+     * size.
+     */
+    private int size;
+    /**
+     * list[].
+     */
+    private int[] list;
     //Implement all the methods mentioned to build a ListADT
     /*
      * The goal for the list is to store items.
@@ -29,7 +41,6 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    private int[] list;
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -53,8 +64,6 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-    private int size;
-
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
@@ -74,7 +83,7 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        list = new int[10];
+        list = new int[TEN];
         size = 0;
     }
     /*
@@ -143,7 +152,7 @@ public class List {
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if (index >= 0 && index < size){
+        if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
@@ -236,7 +245,6 @@ public class List {
         // Replace the code below
         return indexOf(item) >= 0;
     }
-
     /*
      * Returns the index of the first occurrence
      * of the specified element in this list,
@@ -251,7 +259,7 @@ public class List {
      */
     public int indexOf(final int item) {
         // Replace the code below
-        for (int i = 0; i < size ; i++) {
+        for (int i = 0; i < size; i++) {
             if (list[i] == item) {
                 return i;
             }
@@ -308,3 +316,7 @@ public class List {
         }
     }
 }
+
+
+
+
