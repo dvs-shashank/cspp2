@@ -96,7 +96,7 @@ public class List {
      * to the list.
      *
      * The method returns void (nothing)
-     */ 
+     */
     /**
      * Adds all.
      *
@@ -199,18 +199,23 @@ public class List {
         }
         return -1;
     }
+    /**
+     * { counts frequency of calue }.
+     *
+     * @param      value  The value.
+     *
+     * @return     { frquency of value }.
+     */
     public int count(final int value) {
         int count = 0;
         // Replace the code below to write the code for get
-        for (int i = 0; i < size; i++ ) {
+        for (int i = 0; i < size; i++) {
             if (list[i] == value) {
                 count++;
-            }            
+            }
         }
     return count;
     }
-    
-
     /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
@@ -294,9 +299,9 @@ public class List {
      * @param      arr   The arr
      */
     public static int[] convertToInt(final String str) {
-        String strArr[] = str.split(",");
-        int arr[] = new int[strArr.length];
-        for (int i =0; i < arr.length; i++) {
+        String[] strArr = str.split(",");
+        int[] arr = new int[strArr.length];
+        for (int i = 0; i < arr.length; i++) {
             arr[i] = Integer.parseInt(strArr[i]);
         }
         return arr;
@@ -307,12 +312,12 @@ public class List {
      * @param      index  The index.
      * @param      item   The item.
      */
-    public void add(int index, int item) {
-        for (int i = size ; i >= index; i--) {
-            list[i] = list[i-1];
+    public void add(final int index, final int item) {
+        for (int i = size; i >= index; i--) {
+            list[i] = list[i - 1];
         }
         list[index] = item;
-        size ++;
+        size++;
     }
     /**
      * main method.
@@ -336,10 +341,9 @@ public class List {
                 case "count":
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 case "add":
-                if(tokens.length == 2) {
+                if (tokens.length == 2) {
                     l.add(Integer.parseInt(tokens[1]));
-                }
-                else {
+                } else {
                     l.add(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
                 }
                 break;
