@@ -294,9 +294,11 @@ public class List {
         return -1;
     }
     /**
-     * add elememnts at the end of list.
+     * converts to string integer.
      *
-     * @param      arr   The arr
+     * @param      str   The string.
+     *
+     * @return     { integer array  }.
      */
     public static int[] convertToInt(final String str) {
         String[] strArr = str.split(",");
@@ -344,7 +346,8 @@ public class List {
                 if (tokens.length == 2) {
                     l.add(Integer.parseInt(tokens[1]));
                 } else {
-                    l.add(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+                    l.add(Integer.parseInt(tokens[1]),
+                        Integer.parseInt(tokens[2]));
                 }
                 break;
                 case "size":
@@ -380,6 +383,9 @@ public class List {
         }
     }
 }
+
+
+
 
 
 
