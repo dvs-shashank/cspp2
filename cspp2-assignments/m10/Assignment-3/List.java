@@ -82,7 +82,7 @@ public class List<E> {
      * @param      index  The index.
      */
     public void remove(int index) {
-        if (index >= 0 && index < size - 1) {
+        if (index >= 0 && index < size ) {
             for (int i = index; i < size; i++) {
                 list[i] = list[i + 1];
             }
@@ -105,7 +105,7 @@ public class List<E> {
         if (index >= 0 && index < size) {
             return list[index];
         } else {
-            //System.out.println("Invalid Position Exception");
+            System.out.println("Invalid Position Exception");
             return null;
         }
     }
