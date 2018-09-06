@@ -3,14 +3,17 @@ import java.util.Scanner;
 /**
  * Class for student.
  */
-class Student {
+ class Student {
+	/**
+	 * instance variable name.
+	 */
 	private String name;
 	/**
 	 * Constructs the object.
 	 *
 	 * @param      name  The name
 	 */
-	public Student(String name) {
+	public Student(final String name) {
 		this.name = name;
 	}
 	/**
@@ -29,7 +32,7 @@ class Student {
 	 * @return     { boolean value }.
 	 */
 	@Override
-	public boolean equals(Object other) { 
+	public boolean equals(final Object other) { 
 		if (!(other instanceof Student)) {
 			return false;
 		}
@@ -49,7 +52,10 @@ class Student {
 /**
  * Class for solution.
  */
-public class Solution {
+public final  class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	private Solution() {
 
 	}
@@ -58,7 +64,7 @@ public class Solution {
 	 *
 	 * @param      args  The arguments.
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
@@ -327,10 +333,10 @@ public class Solution {
 			                listStudent.add(new Student(tokens[1]));
 		                break;
 		                case "addAll":
-		                if(tokens.length==2){
+		                if (tokens.length == 2) {
 		                String[] t1 = tokens[1].split(",");
 		                Student[] temp = new Student[t1.length];
-		                for (int i = 0; i < t1.length ;i++ ) {
+		                for (int i = 0; i < t1.length ; i++) {
 		                	temp[i] = new Student(t1[i]);
 		                }
 		                listStudent.addAll(temp);
