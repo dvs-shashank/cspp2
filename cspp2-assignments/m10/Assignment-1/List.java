@@ -104,7 +104,7 @@ public class List {
      */
     public void addAll(final int[] items) {
         //Inserts the specified element at the end of the list.
-        for (int i = 0; i < items.length; i++) {
+        for (int i = 0; i < list.length; i++) {
             list[size] = items[i];
             size++;
         }
@@ -346,11 +346,12 @@ public class List {
             case "count":
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
             case "add":
-                if (tokens.length == 2) {
-                    l.add(Integer.parseInt(tokens[1]));
+                String[] token = tokens[1].split(",");
+                if (token.length == 2) {
+                    l.add(Integer.parseInt(token[0]),
+                          Integer.parseInt(token[1]));
                 } else {
-                    l.add(Integer.parseInt(tokens[1]),
-                          Integer.parseInt(tokens[2]));
+                    l.add(Integer.parseInt(token[0]));
                 }
                 break;
             case "size":
