@@ -86,9 +86,13 @@ public class List<E> {
             for (int i = index; i < size; i++) {
                 list[i] = list[i + 1];
             }
+
+            list[size] = null;
+            size--;
         }
-        list[size] = null;
-        size--;
+        else {
+            System.out.println("Invalid Position Exception");
+        }
     }
     /**
      * gets the index value of element.
@@ -98,10 +102,10 @@ public class List<E> {
      * @return     { index value }.
      */
     public E get(int index) {
-        if (index >=0 && index < size) {
-        return list[index];           
+        if (index >= 0 && index < size) {
+            return list[index];
         } else {
-            System.out.println("Invalid position Exception");
+            System.out.println("Invalid Position Exception");
             return null;
         }
     }
@@ -134,7 +138,7 @@ public class List<E> {
         String str = "[";
         for ( int i = 0; i < size; i++) {
             str += list[i];
-            if(i < size - 1) {
+            if (i < size - 1) {
                 str += ",";
             }
         }
@@ -149,7 +153,7 @@ public class List<E> {
      */
     public boolean contains(E item) {
         for (int i = 0; i < size; i++) {
-            if(list[i].equals(item)) {
+            if (list[i].equals(item)) {
                 return true;
             }
         }
