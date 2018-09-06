@@ -2,17 +2,11 @@ import java.io.BufferedInputStream;
 import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.Scanner;
-
-/*
-     * The goal for the list is to store items.
-     * How are we going to store the items in the list?
-     * An array would be good. Right?
-     * So, when we do not what we are going to have in the list
-     * We need to create a Generic list to store the items
-
-     * Here E is a type parameter, and it will be replaced with
-        actual type when the object got created.
-     */
+/**
+ * Generic list class.
+ *
+ * @param      <E>   { used for the purpose of generics}.
+ */
 public class List<E> {
     private E[] list;
     private int size;
@@ -27,7 +21,7 @@ public class List<E> {
     /**
      * Constructs the object.
      *
-     * @param      param  The parameter
+     * @param      param  The parameter.
      */
     public List(int param) {
         list = ((E[])new Object[param]);
@@ -66,12 +60,10 @@ public class List<E> {
             add(items[i]);
         }
     }
-    /*
-     * The size method returns the value of the size.
-     * The purpose of the method is to announce the size of the list
-     * to the objects outside the list
+    /**
+     * calculates the size of the list.
      *
-     * The method returns an int. Empty list should return 0.
+     * @return     { size of list }.
      */
     public int size() {
         return size;
@@ -145,11 +137,12 @@ public class List<E> {
         str += "]";
         return str;
     }
-    /*
-     * Contains return true if the list has
-     * the item passed as an argument to the method
-     * So, iterate through the list and return true if
-     * the item exists and otherwise false
+    /**
+     * check whether item is present or not.
+     *
+     * @param      item  The item
+     *
+     * @return     { boolean value. }
      */
     public boolean contains(E item) {
         for (int i = 0; i < size; i++) {
@@ -163,6 +156,13 @@ public class List<E> {
      * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
+     */
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { value of index }.
      */
     public int indexOf(E item) {
         for (int i = 0; i < size; i++) {
