@@ -86,7 +86,7 @@ public class List {
         list = new int[TEN];
         size = 0;
     }
-    /*
+   /*
      * The add method does what the name suggests.
      * Add an int item to the list.
      * The assumption is to store the item at the end of the list
@@ -96,11 +96,11 @@ public class List {
      * to the list.
      *
      * The method returns void (nothing)
-     */
+     */ 
     /**
-     * adds the value at last position.
+     * Adds all.
      *
-     * @param      item  The item.
+     * @param      items  The items.
      */
     public void addAll(final int[] items) {
         //Inserts the specified element at the end of the list.
@@ -109,8 +109,12 @@ public class List {
             size++;
         }
     }
+    /**
+     * Inserts the specified element at the end of the list.
+     *
+     * @param      item  The item.
+     */
     public void add(final int item) {
-        //Inserts the specified element at the end of the list.
         list[size] = item;
         size++;
     }
@@ -297,10 +301,17 @@ public class List {
         }
         return arr;
     }
+    /**
+     * { adding at a given index }.
+     *
+     * @param      index  The index.
+     * @param      item   The item.
+     */
     public void add(int index, int item) {
-        for (int i = size; i > index; i--) {
+        for (int i = size ; i >= index; i--) {
             list[i] = list[i-1];
         }
+        list[index] = item;
         size ++;
     }
     /**
