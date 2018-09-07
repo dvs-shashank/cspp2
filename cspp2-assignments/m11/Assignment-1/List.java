@@ -118,7 +118,7 @@ public class List {
      *
      */
     public void remove(int index) {
-        int[] arr = new int[size];
+        int[] arr = new int[list.length];
         System.arraycopy(list, 0, arr, 0, list.length);
         for (int i = index; i < size; i++) {
             arr[i] = arr[i + 1];
