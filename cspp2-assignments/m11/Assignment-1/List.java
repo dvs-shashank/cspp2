@@ -196,7 +196,12 @@ public class List {
     */
     public void removeAll(int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
-            remove(i);
+            for (int j = 0; j < list.length; j++) {
+                if (list[j] == newArray[i]) {
+                    remove(j);
+                    j--;
+                }
+            }
         }
     }
     /*
@@ -209,10 +214,10 @@ public class List {
     public List subList(int start, int end) {
         List tempList = new List();
         // write the logic for subList
-        if (start > end ) {
+        if ((start > end) || start == end ) {
             System.out.println("Index Out of Bounds Exception");
             return null;
-        } else if (start < 0 || end < 0) {
+        } else if (size < Math.abs(start - end)) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         } else {
