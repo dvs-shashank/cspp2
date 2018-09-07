@@ -219,8 +219,8 @@ public class List {
             for (int i = start; i < end; i++) {
                 tempList.add(list[i]);
             }
+            return tempList;
         }
-        return tempList;
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
@@ -230,7 +230,7 @@ public class List {
         int count = 0;
         for (int i = 0; i < size; i++) {
             int temp = listData.get(i);
-            if(temp== list[i]) {
+            if (temp == list[i]) {
                 count++;
             }
         }
