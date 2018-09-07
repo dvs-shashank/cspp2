@@ -118,11 +118,14 @@ public class List {
      *
      */
     public void remove(int index) {
+        int[] arr = new int[size];
+        System.arraycopy(list, 0, arr, 0, list.length);
         for (int i = index; i < size; i++) {
-            list[i] = list[i + 1];
+            arr[i] = arr[i + 1];
         }
-        list[size] = 0;
+        arr[size] = 0;
         size--;
+        list = arr;
     }
 
     /*
