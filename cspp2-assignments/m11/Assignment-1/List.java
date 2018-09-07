@@ -118,14 +118,11 @@ public class List {
      *
      */
     public void remove(int index) {
-        int[] arr = new int[list.length];
-        System.arraycopy(list, 0, arr, 0, list.length);
         for (int i = index; i < size; i++) {
-            arr[i] = arr[i + 1];
+            list[i] = list[i + 1];
         }
-        arr[size] = 0;
+        list[size] = 0;
         size--;
-        list = arr;
     }
 
     /*
@@ -319,9 +316,8 @@ public class List {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     int[] a = new int[t2.length];
-                    for (int i = 0; i < t2.length; i++) {
+                    for (int i = 0; i < t2.length; i++)
                         a[i] = Integer.parseInt(t2[i]);
-                    }
                     l.removeAll(a);
                 }
                 break;
