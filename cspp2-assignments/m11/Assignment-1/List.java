@@ -4,7 +4,17 @@ import java.util.Scanner;
  * Class List .
  */
 public class List {
+    /**
+     * constant 25.
+     */
+    public static final int SIZE = 25;
+    /**
+     * list[].
+     */
     private int[] list;
+    /**
+     * size.
+     */
     private int size;
     //Implement all the methods mentioned to build a ListADT
 
@@ -77,7 +87,7 @@ public class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
         size = 0;
-        list = new int[25];
+        list = new int[SIZE];
     }
     /*
      * The add method does what the name suggests. Add an int item to the list.
@@ -408,18 +418,22 @@ public class List {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     int[] a = new int[t2.length];
-                    for (int i = 0; i < t2.length; i++)
+                    for (int i = 0; i < t2.length; i++) {
                         a[i] = Integer.parseInt(t2[i]);
+                    }
                     l.removeAll(a);
                 }
                 break;
             case "subList": {
-                if (tokens.length != 2) break;
+                if (tokens.length != 2) {
+                    break;
+                }
                 String[] arrstring3 = tokens[1].split(",");
                 List object = l.subList(Integer.parseInt(arrstring3[0]),
                                         Integer.parseInt(arrstring3[1]));
-                if (object != null)
+                if (object != null) {
                     System.out.println(object);
+                }
                 break;
             }
             case "equals":
