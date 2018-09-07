@@ -121,7 +121,7 @@ public class List {
         for (int i = index; i < size; i++) {
             list[i] = list[i + 1];
         }
-        list[size] = 0;
+        list[size - 1] = 0;
         size--;
     }
 
