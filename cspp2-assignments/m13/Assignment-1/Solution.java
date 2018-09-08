@@ -142,7 +142,7 @@ class Set {
         int[][] temp = new int[setObj.size() + set.length][2];
         for(int i = 0; i < setObj.size() + set.length; i++) {
             for(int j = 0; j < 2; j++) {
-                temp[i][j]= set[i];
+                temp[i][j]= set[j];
             }
         }
         return temp;
