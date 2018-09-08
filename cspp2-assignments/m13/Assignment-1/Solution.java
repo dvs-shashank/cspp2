@@ -112,39 +112,25 @@ class Set {
         }
         return temp;
     }
-
-        public Set retainAll(final Set anySet) {
+    /**
+     * deletes items not in common.
+     *
+     * @param      items  The items
+     *
+     * @return     { set }.
+     */
+    public Set retainAll(final int[] items) {
         Set temp = new Set();
         for (int i = 0; i < set.length; i++) {
-            for (int j = 0; j < anySet.set.length; j++) {
-                if (set[i] != anySet.set[j]) {
-                    temp.add(set[i]);
+            for (int j = 0; j < items.length; j++) {
+                if (set[i] == items[j]) {
+                    temp.add(items[i]);
                 }
             }
         }
         return temp;
     }
 
-    /**
-     * coomon elements.
-     *
-     * @param      items  The items
-     *
-     * @return     { common items }.
-     */
-    public Set retainAll(final int[] items) {
-        //Set tempSet = new Set[items.length];
-        //int[] tempList = new int[items.length];
-        /*for( int i =0; i < items.length; i++) {
-            for(int j =0; j < size; j++) {
-                if(items[i].equals(set[j])) {
-                    tempSet[i].add(set[j]);
-                }
-            }
-        }*/
-        //Arrays.sort(tempList);
-        return new Set();
-    }
     /**
      * cartesian product if two sets.
      *
