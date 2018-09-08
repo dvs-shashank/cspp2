@@ -113,7 +113,7 @@ class Set {
         return temp;
     }
     /**
-     * deletes items not in common.
+     * retains All items.
      *
      * @param      items  The items
      *
@@ -139,7 +139,7 @@ class Set {
      * @return     { int[][] cartesian product }.
      */
     public int[][] cartesianProduct(final Set setObj) {
-        int[][] temp = new int[2][2];
+        int[][] temp = new int[setObj.size][setObj.size];
         return temp;
     }
 }
