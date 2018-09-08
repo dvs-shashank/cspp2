@@ -57,8 +57,27 @@ class Set {
 			add(items[i]);
 		}
 	}
-	public Set intersection(Object setObj) {
-		//Set tempSet = new set[setObj.size];
+	public Set intersection(Set anySet) {
+        Set temp = new Set();
+        for (int i = 0; i < set.length; i++) {
+            for (int j = 0; j < anySet.set.length; j++) {
+                if (set[i] == anySet.set[j]) {
+                    temp.set[i] = set[i];
+                }
+            }
+        }
+        return temp;
+    }
+	/*public Set intersection(Set setObj) {
+		Set tempSet = new Set();
+		for (int i = 0; i < set.length; i++) {
+            for (int j = 0; j < setObj.set.length; j++) {
+                if (set[i] == setObj.set[j]) {
+                    tempSet.set[i] = set[i];
+                }
+            }
+        }
+        return tempSet;
 
 		//Set[] tempSet = new Set[setObj.size()]; 
 		/*for( int i = 0; i < setObj.size(); i++) {
@@ -68,8 +87,8 @@ class Set {
 				}
 			}
 		}*/
-		return new Set();
-	}
+		//return new Set();
+	//}
 	public Set retainAll(int[] items) {
 		//Set tempSet = new Set[items.length];
 		//int[] tempList = new int[items.length];
