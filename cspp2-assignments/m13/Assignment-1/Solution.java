@@ -62,7 +62,7 @@ class Set {
         for (int i = 0; i < set.length; i++) {
             for (int j = 0; j < anySet.set.length; j++) {
                 if (set[i] == anySet.set[j]) {
-                    temp.set[i] = set[i];
+                    temp.add(set[i]);
                 }
             }
         }
