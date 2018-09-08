@@ -31,6 +31,7 @@ class Set {
 			str += set[i];
 			if (i < size - 1) {
 				str += ",";
+				str += " ";
 			}
 		}
 		str += "}";
