@@ -1,23 +1,46 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
 /**
  * Class for set.
  * @author : Shashank
  */
 class Set {
+	/**
+	 * global varaible ten.
+	 */
 	public static final int TEN = 10;
+	/**
+	 * instance variable size.
+	 */
 	private int size;
+	/**
+	 * instance arr[] set.
+	 */
 	private int[] set;
+	/**
+	 * Constructs the object.
+	 */
 	public Set() {
 		set = new int[TEN];
 		size = 0;
 	}
+	/**
+	 * calcualtes the size of set.
+	 *
+	 * @return     set size.
+	 */
 	public int size() {
 		return size;
 	}
-	public boolean contains(int item) {
+	/**
+	 * checks for presence of item.
+	 *
+	 * @param      item  The item.
+	 *
+	 * @return     { true or false }.
+	 */
+	public boolean contains(final int item) {
 		for (int i = 0; i < size; i++) {
 			if (set[i] == item) {
 				return true;
@@ -25,6 +48,11 @@ class Set {
 		}
 		return false;
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		String str = "{";
 		for(int i =0; i < size; i++) {
@@ -37,10 +65,14 @@ class Set {
 		str += "}";
 		return str;
 	}
-	public void add(int item) {
+	/**
+	 * add item to set.
+	 *
+	 * @param      item  The item.
+	 */
+	public void add(final int item) {
 		//set[size++] = item;
 		//int flag = 0;
-
 		int count = 0;
 		for (int i =0; i<set.length;i++) {
 			if(set[i]!=item) {
@@ -52,12 +84,24 @@ class Set {
 			set[size++] = item;
 		}
 	}
-	public void add(int[] items) {
+	/**
+	 * add items to set.
+	 *
+	 * @param      items  The items.
+	 */
+	public void add(final int[] items) {
 		for(int i = 0; i < items.length; i++) {
 			add(items[i]);
 		}
 	}
-	public Set intersection(Set anySet) {
+	/**
+	 * intersection of two sets.
+	 *
+	 * @param      anySet  Any set.
+	 *
+	 * @return     { common set items }.
+	 */
+	public Set intersection(final Set anySet) {
         Set temp = new Set();
         for (int i = 0; i < set.length; i++) {
             for (int j = 0; j < anySet.set.length; j++) {
@@ -68,28 +112,14 @@ class Set {
         }
         return temp;
     }
-	/*public Set intersection(Set setObj) {
-		Set tempSet = new Set();
-		for (int i = 0; i < set.length; i++) {
-            for (int j = 0; j < setObj.set.length; j++) {
-                if (set[i] == setObj.set[j]) {
-                    tempSet.set[i] = set[i];
-                }
-            }
-        }
-        return tempSet;
-
-		//Set[] tempSet = new Set[setObj.size()]; 
-		/*for( int i = 0; i < setObj.size(); i++) {
-			for(int j = 0; j < this.size(); j++) {
-				if((setObj.get(i)).equals(this.get(j))) {
-					tempSet.add(this.get(j));
-				}
-			}
-		}*/
-		//return new Set();
-	//}
-	public Set retainAll(int[] items) {
+	/**
+	 * coomon elements.
+	 *
+	 * @param      items  The items
+	 *
+	 * @return     { common items }.
+	 */
+	public Set retainAll(final int[] items) {
 		//Set tempSet = new Set[items.length];
 		//int[] tempList = new int[items.length];
 		/*for( int i =0; i < items.length; i++) {
@@ -102,8 +132,15 @@ class Set {
 		//Arrays.sort(tempList);
 		return new Set();
 	}
-	public int[][] cartesianProduct(Set setObj) {
-		int[][] temp = new int[2][5];
+	/**
+	 * cartesian product if two sets.
+	 *
+	 * @param      setObj  The set object
+	 *
+	 * @return     { int[][] cartesian product }.
+	 */
+	public int[][] cartesianProduct(final Set setObj) {
+		int[][] temp = new int[2][2];
 		return temp;
 	}
 }
