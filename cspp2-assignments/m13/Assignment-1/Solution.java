@@ -112,6 +112,19 @@ class Set {
         }
         return temp;
     }
+
+        public Set retainAll(final Set anySet) {
+        Set temp = new Set();
+        for (int i = 0; i < set.length; i++) {
+            for (int j = 0; j < anySet.set.length; j++) {
+                if (set[i] != anySet.set[j]) {
+                    temp.add(set[i]);
+                }
+            }
+        }
+        return temp;
+    }
+
     /**
      * coomon elements.
      *
