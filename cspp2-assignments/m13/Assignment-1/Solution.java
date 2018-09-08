@@ -124,7 +124,7 @@ class Set {
         for (int i = 0; i < set.length; i++) {
             for (int j = 0; j < items.length; j++) {
                 if (set[i] == items[j]) {
-                    temp.add(items[i]);
+                    temp.add(items[j]);
                 }
             }
         }
