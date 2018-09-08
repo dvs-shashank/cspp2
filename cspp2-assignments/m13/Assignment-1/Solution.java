@@ -139,7 +139,7 @@ class Set {
      * @return     { int[][] cartesian product }.
      */
     public int[][] cartesianProduct(final Set setObj) {
-        int[][] temp = new int[setObj.size][setObj.size];
+        int[][] temp = new int[2][setObj.size];
         return temp;
     }
 }
