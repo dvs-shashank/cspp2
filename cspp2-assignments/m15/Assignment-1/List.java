@@ -243,7 +243,7 @@ public class List {
 					String[] t = tokens[1].split(",");
 					if (t.length == 1) {
 						l.add(
-							Integer.parseInt(tokens[1]));
+					Integer.parseInt(tokens[1]));
 					}
 				}
 				break;
@@ -268,13 +268,13 @@ public class List {
 			case "get":
 				if (tokens.length == 2) {
 					System.out.println(l.get(
-					                       Integer.parseInt(tokens[1])));
+					          Integer.parseInt(tokens[1])));
 				}
 				break;
 			case "contains":
 				if (tokens.length == 2) {
 					System.out.println(l.contains(
-					                       Integer.parseInt(tokens[1])));
+					             Integer.parseInt(tokens[1])));
 				}
 				break;
 			case "addAll":
@@ -282,7 +282,8 @@ public class List {
 					String[] t1 = tokens[1].split(",");
 					int[] temp = new int[t1.length];
 					for (int i = 0; i < temp.length; i++) {
-						temp[i] = Integer.parseInt(t1[i]);
+						temp[i] = Integer.parseInt(
+							t1[i]);
 					}
 					l.addAll(temp);
 				}
@@ -304,7 +305,7 @@ public class List {
 				String[] arrstring3 = tokens[1].split(",");
 				List object = l.subList(
 					Integer.parseInt(arrstring3[0]),
-				                        Integer.parseInt(arrstring3[1]));
+				             Integer.parseInt(arrstring3[1]));
 				if (object != null) {
 					System.out.println(object);
 				}
