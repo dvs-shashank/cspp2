@@ -304,7 +304,7 @@ public class List {
 			if (start < 0 || end < 0) {
 				throw new IndexOutOfBoundsException();
 			}
-			if (start == end || start < end) {
+			else if (start == end || start > end) {
 				throw new IndexOutOfBoundsException();
 			}
 			for (int i = start; i < end; i++) {
