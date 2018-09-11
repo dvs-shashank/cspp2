@@ -69,8 +69,8 @@ public class List {
 	 *
 	 * @return     {  frequency }
 	 */
-	public int count(int item) {
-		int count =0;
+	public int count(final int item) {
+		int count = 0;
 		for (int i = 0; i < size; i++) {
 			if (list[i] == item) {
 				count++;
@@ -167,13 +167,12 @@ public class List {
 		List tempList = new List();
 		// write the logic for subList
 		try {
-			if(Math.abs(start - end) == 1) {
+			if (Math.abs(start - end) == 1) {
 				throw new IndexOutOfBoundsException();
 			}
 			if (start < 0 || end < 0) {
 				throw new IndexOutOfBoundsException();
-			}
-			else if (start == end || start > end) {
+			} else if (start == end || start > end) {
 				throw new IndexOutOfBoundsException();
 			}
 			for (int i = start; i < end; i++) {
@@ -234,7 +233,6 @@ public class List {
 			String line = stdin.nextLine();
 			// split the line using space
 			String[] tokens = line.split(" ");
-			// based on the list operation invoke the corresponding method
 			switch (tokens[0]) {
 			case "count":
 				System.out.println(l.count(Integer.parseInt(tokens[1])));
