@@ -235,13 +235,15 @@ public class List {
 			String[] tokens = line.split(" ");
 			switch (tokens[0]) {
 			case "count":
-				System.out.println(l.count(Integer.parseInt(tokens[1])));
+				System.out.println(l.count
+					(Integer.parseInt(tokens[1])));
 				break;
 			case "add":
 				if (tokens.length == 2) {
 					String[] t = tokens[1].split(",");
 					if (t.length == 1) {
-						l.add(Integer.parseInt(tokens[1]));
+						l.add
+						(Integer.parseInt(tokens[1]));
 					}
 				}
 				break;
@@ -299,7 +301,8 @@ public class List {
 					break;
 				}
 				String[] arrstring3 = tokens[1].split(",");
-				List object = l.subList(Integer.parseInt(arrstring3[0]),
+				List object = l.subList
+				(Integer.parseInt(arrstring3[0]),
 				                        Integer.parseInt(arrstring3[1]));
 				if (object != null) {
 					System.out.println(object);
