@@ -260,8 +260,9 @@ public class List {
 				break;
 			case "indexOf":
 				if (tokens.length == 2) {
-					System.out.println(l.indexOf(
-					                       Integer.parseInt(tokens[1])));
+					System.out.println(
+						l.indexOf(
+					              Integer.parseInt(tokens[1])));
 				}
 				break;
 			case "get":
