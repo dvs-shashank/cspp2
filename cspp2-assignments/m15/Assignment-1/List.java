@@ -262,7 +262,7 @@ public class List {
 				if (tokens.length == 2) {
 					System.out.println(
 						l.indexOf(
-					              Integer.parseInt(tokens[1])));
+					      Integer.parseInt(tokens[1])));
 				}
 				break;
 			case "get":
