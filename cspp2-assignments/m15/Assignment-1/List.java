@@ -308,7 +308,7 @@ public class List {
             return tempList;
         }
         catch(IndexOutOfBoundsException e) {
-            System.out.println("Index Out Of Bounds Exception");
+            System.out.println("Index Out of Bounds Exception");
         }
         return null;
     }
