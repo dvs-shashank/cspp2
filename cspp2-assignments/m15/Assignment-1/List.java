@@ -301,6 +301,9 @@ public class List {
 		List tempList = new List();
 		// write the logic for subList
 		try {
+			if(Math.abs(start - end) == 1) {
+				throw new IndexOutOfBoundsException();
+			}
 			if (start < 0 || end < 0) {
 				throw new IndexOutOfBoundsException();
 			}
