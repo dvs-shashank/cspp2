@@ -302,6 +302,9 @@ public class List {
         List tempList = new List();
         // write the logic for subList
         try {
+        	if (start < 0 || end < 0) {
+        		throw new IndexOutOfBoundsException();
+        	}
             for (int i = start; i < end; i++) {
                 tempList.add(list[i]);
             } 
