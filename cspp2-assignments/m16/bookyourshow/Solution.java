@@ -27,7 +27,7 @@ class BookYourShow {
         Show checkShow = getAShow(movieName, date);
         if (checkShow != null) {
             int flag = 0;
-            for (int i =0; i < allPatronsCount; i++) {
+            for (int i = 0; i < allPatronsCount; i++) {
                 if (allPatron[i].phno.equals(phno)) {
                     flag = 1;
                     break;
