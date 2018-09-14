@@ -81,28 +81,31 @@ class BookYourShow {
         final Patron patron, final String[] seats) {
         Show checkShow = getAShow(movieName, date);
         int flag = 0;
-        if (checkShow != null) {
-            for (int i = 0; i < seats.length; i++) {
-                //seats[i]
-                for (int j = 0; j < checkShow.seats.length; j++) {
-                    if (seats[i].equals(checkShow.seats[j])) {
-                        checkShow.seats[j] = "N/A";
-                        flag = 1;
-                        //allPatron[allPatronsCount++] = patron;
+        // if(allShowsCount == 0){
+        //     System.out.println("No show");
+        // } else {
+            if (checkShow != null) {
+                for (int i = 0; i < seats.length; i++) {
+                    //seats[i]
+                    for (int j = 0; j < checkShow.seats.length; j++) {
+                        if (seats[i].equals(checkShow.seats[j])) {
+                            checkShow.seats[j] = "N/A";
+                            flag = 1;
+                            //allPatron[allPatronsCount++] = patron;
+                        }
                     }
                 }
+                for (int i = 0; i < allShowsCount; i++) {
+                    if (allShows[i].movieName.equals(checkShow.movieName)
+                    && allShows[i].date.equals(checkShow.date)) {
+                        allShows[i] = checkShow;
+                    }
+                }
+                if (flag == 1) {
+                    allPatron[allPatronsCount++] = patron;
+                }
             }
-
-        }
-        for (int i = 0; i < allShowsCount; i++) {
-            if (allShows[i].movieName.equals(checkShow.movieName)
-            && allShows[i].date.equals(checkShow.date)) {
-                allShows[i] = checkShow;
-            }
-            if (flag == 1) {
-                allPatron[allPatronsCount++] = patron;
-            }
-        }
+        // }
     }
     /**
      * Gets a show.
