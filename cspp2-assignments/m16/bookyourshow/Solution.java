@@ -128,6 +128,9 @@ class BookYourShow {
 class Show {
     public String movieName;
     public String date;
+    /**
+     * seats array.
+     */
     public String[] seats;
     /**
      * Constructs the object.
