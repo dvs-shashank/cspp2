@@ -24,6 +24,9 @@ class BookYourShow {
                 }   break;
             }
         }
+        else {
+            System.out.println("Invalid");
+        }
     }
     public void addAShow(Show show) {
         allShows[allShowsCount++] = show;
