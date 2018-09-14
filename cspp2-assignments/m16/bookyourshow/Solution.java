@@ -18,13 +18,20 @@ class BookYourShow {
     public void printTicket(String movieName, String date, String phno) {
         Show checkShow = getAShow(movieName, date);
         if (checkShow != null) {
+            int flag = 0;
             for (int i =0; i < allPatronsCount; i++) {
                 if (allPatron[i].phno.equals(phno)) {
-                    System.out.println(phno + " " + movieName + " " + date);
-                }   break;
+                    flag = 1;
+                    break;
+                }
             }
-        }
-        else {
+            if (flag == 1) {
+                System.out.println(phno + " " + movieName + " " + date);
+            }
+            else {
+                System.out.println("Invalid");
+            }
+        } else {
             System.out.println("Invalid");
         }
     }
@@ -67,17 +74,17 @@ class BookYourShow {
         return null;
     }
     public void showAll() {
-        for (int i = 0; i <allShowsCount; i++) {
-        String st = allShows[i].movieName + "," + allShows[i].date + ",";
-        String onlySeats = "[";
-            for (int j =0; j< allShows[i].seats.length; j++) {
+        for (int i = 0; i < allShowsCount; i++) {
+            String st = allShows[i].movieName + "," + allShows[i].date + ",";
+            String onlySeats = "[";
+            for (int j = 0; j < allShows[i].seats.length; j++) {
                 onlySeats += allShows[i].seats[j];
-                if (i <allShows[i].seats.length - 1) {
+                if (i < allShows[i].seats.length - 1) {
                     onlySeats += ",";
                 }
             }
-        onlySeats += "]";
-        st += onlySeats;
+            onlySeats += "]";
+            st += onlySeats;
         }
     }
 }
