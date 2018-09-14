@@ -4,6 +4,10 @@ import java.util.Scanner;
  */
 class BookYourShow {
     /**
+     * constant 10.
+     */
+    public static final int TEN = 10;
+    /**
      * { allShows }.
      */
     public Show[] allShows;
@@ -23,9 +27,9 @@ class BookYourShow {
      * Constructs the object.
      */
     BookYourShow() {
-        allShows = new Show[10];
+        allShows = new Show[TEN];
         allShowsCount = 0;
-        allPatron = new Patron[10];
+        allPatron = new Patron[TEN];
         allPatronsCount = 0;
     }
     /**
@@ -168,7 +172,13 @@ class Show {
  * Class for patron.
  */
 class Patron {
+    /**
+     * { personName }.
+     */
     public String personName;
+    /**
+     * { phone number }
+     */
     public String phno;
     /**
      * Constructs the object.
