@@ -3,9 +3,21 @@ import java.util.Scanner;
  * Class for book your show.
  */
 class BookYourShow {
+    /**
+     * { allShows }
+     */
     public Show[] allShows;
+    /**
+     * { allShowsCount }
+     */
     public int allShowsCount;
+    /**
+     * { allPatron }
+     */
     public Patron[] allPatron;
+    /**
+     * { allPatronsCount }
+     */
     public int allPatronsCount;
     /**
      * Constructs the object.
