@@ -76,7 +76,8 @@ class BookYourShow {
      * @param      patron     The patron
      * @param      seats      The seats
      */
-    public void bookAShow(final String movieName, final String date, final Patron patron, final String[] seats) {
+    public void bookAShow(final String movieName, final String date,
+        final Patron patron, final String[] seats) {
         Show checkShow = getAShow(movieName, date);
         int flag = 0;
         if (checkShow != null) {
@@ -93,7 +94,8 @@ class BookYourShow {
 
         }
         for (int i = 0; i < allShowsCount; i++) {
-            if (allShows[i].movieName.equals(checkShow.movieName) && allShows[i].date.equals(checkShow.date)) {
+            if (allShows[i].movieName.equals(checkShow.movieName)
+            && allShows[i].date.equals(checkShow.date)) {
                 allShows[i] = checkShow;
             }
             if (flag == 1) {
@@ -114,7 +116,8 @@ class BookYourShow {
             System.out.println("No show");
         }
         for (int i = 0; i < allShowsCount; i++) {
-            if (allShows[i].movieName.equals(movieName) && allShows[i].date.equals(date)) {
+            if (allShows[i].movieName.equals(movieName)
+            && allShows[i].date.equals(date)) {
                 return allShows[i];
             }
         }
