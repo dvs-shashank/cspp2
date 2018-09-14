@@ -39,7 +39,8 @@ class BookYourShow {
      * @param      date       The date
      * @param      phno       The phno
      */
-    public void printTicket(final String movieName, final String date, final String phno) {
+    public void printTicket(final String movieName,
+        final String date, final String phno) {
         Show checkShow = getAShow(movieName, date);
         if (checkShow != null) {
             int flag = 0;
@@ -180,7 +181,7 @@ class Patron {
      */
     public String personName;
     /**
-     * { phone number }
+     * { phone number }.
      */
     public String phno;
     /**
