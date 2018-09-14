@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.Arrays;
 /**
  * Class for book your show.
  */
@@ -25,7 +23,7 @@ class BookYourShow {
      * @param      date       The date
      * @param      phno       The phno
      */
-    public void printTicket(String movieName, String date, String phno) {
+    public void printTicket(final String movieName, final String date, final String phno) {
         Show checkShow = getAShow(movieName, date);
         if (checkShow != null) {
             int flag = 0;
@@ -50,7 +48,7 @@ class BookYourShow {
      *
      * @param      show  The show
      */
-    public void addAShow(Show show) {
+    public void addAShow(final Show show) {
         allShows[allShowsCount++] = show;
 
     }
@@ -62,7 +60,7 @@ class BookYourShow {
      * @param      patron     The patron
      * @param      seats      The seats
      */
-    public void bookAShow(String movieName, String date, Patron patron, String[] seats) {
+    public void bookAShow(final String movieName, final String date, final Patron patron, final String[] seats) {
         Show checkShow = getAShow(movieName, date);
         int flag = 0;
         if (checkShow != null) {
@@ -95,7 +93,7 @@ class BookYourShow {
      *
      * @return     A show.
      */
-    public Show getAShow(String movieName, String date) {
+    public Show getAShow(final String movieName, final String date) {
         if (allShowsCount == 0) {
             System.out.println("No show");
         }
@@ -138,7 +136,7 @@ class Show {
      * @param      date       The date
      * @param      seats      The seats
      */
-    Show(String movieName, String date, String[] seats) {
+    Show(final String movieName, final String date, final String[] seats) {
         this.movieName = movieName;
         this.date = date;
         this.seats = seats;
@@ -157,7 +155,7 @@ class Patron {
      * @param      personName  The person name
      * @param      phno        The phno
      */
-    Patron(String personName, String phno) {
+    Patron(final String personName, final String phno) {
         this.personName = personName;
         this.phno = phno;
     }
