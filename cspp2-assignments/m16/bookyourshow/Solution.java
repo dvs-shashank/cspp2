@@ -126,7 +126,13 @@ class BookYourShow {
  * Class for show.
  */
 class Show {
+    /**
+     * movie name.
+     */
     public String movieName;
+    /**
+     * date.
+     */
     public String date;
     /**
      * seats array.
