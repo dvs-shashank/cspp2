@@ -4,19 +4,19 @@ import java.util.Scanner;
  */
 class BookYourShow {
     /**
-     * { allShows }
+     * { allShows }.
      */
     public Show[] allShows;
     /**
-     * { allShowsCount }
+     * { allShowsCount }.
      */
     public int allShowsCount;
     /**
-     * { allPatron }
+     * { allPatron }.
      */
     public Patron[] allPatron;
     /**
-     * { allPatronsCount }
+     * { allPatronsCount }.
      */
     public int allPatronsCount;
     /**
