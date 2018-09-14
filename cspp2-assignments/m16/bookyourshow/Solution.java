@@ -61,8 +61,6 @@ class BookYourShow {
             }
             if (flag == 1) {
                 allPatron[allPatronsCount++] = patron;
-            } else {
-                System.out.println("No show");
             }
         }
     }
