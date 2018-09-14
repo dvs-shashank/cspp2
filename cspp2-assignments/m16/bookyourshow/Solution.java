@@ -66,6 +66,9 @@ class BookYourShow {
         }
     }
     public Show getAShow(String movieName, String date) {
+        if (allShowsCount == 0) {
+            System.out.println("No show");
+        }
         for (int i = 0; i < allShowsCount; i++) {
             if (allShows[i].movieName.equals(movieName) && allShows[i].date.equals(date)) {
                 return allShows[i];
