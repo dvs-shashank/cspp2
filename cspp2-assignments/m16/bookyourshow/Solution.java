@@ -11,6 +11,8 @@ class BookYourShow {
     BookYourShow() {
         allShows = new Show[10];
         allShowsCount = 0;
+        allPatron = new Patron[10];
+        allPatronsCount = 0;
     }
 
     public void printTicket(String movieName, String date, String phno) {
