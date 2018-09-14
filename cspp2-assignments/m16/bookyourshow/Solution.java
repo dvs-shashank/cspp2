@@ -1,20 +1,30 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
-
+/**
+ * Class for book your show.
+ */
 class BookYourShow {
     public Show[] allShows;
     public int allShowsCount;
     public Patron[] allPatron;
     public int allPatronsCount;
-
+    /**
+     * Constructs the object.
+     */
     BookYourShow() {
         allShows = new Show[10];
         allShowsCount = 0;
         allPatron = new Patron[10];
         allPatronsCount = 0;
     }
-
+    /**
+     * prints ticket.
+     *
+     * @param      movieName  The movie name
+     * @param      date       The date
+     * @param      phno       The phno
+     */
     public void printTicket(String movieName, String date, String phno) {
         Show checkShow = getAShow(movieName, date);
         if (checkShow != null) {
@@ -35,10 +45,23 @@ class BookYourShow {
             System.out.println("Invalid");
         }
     }
+    /**
+     * Adds a show.
+     *
+     * @param      show  The show
+     */
     public void addAShow(Show show) {
         allShows[allShowsCount++] = show;
 
     }
+    /**
+     * books shows.
+     *
+     * @param      movieName  The movie name
+     * @param      date       The date
+     * @param      patron     The patron
+     * @param      seats      The seats
+     */
     public void bookAShow(String movieName, String date, Patron patron, String[] seats) {
         Show checkShow = getAShow(movieName, date);
         int flag = 0;
@@ -64,6 +87,14 @@ class BookYourShow {
             }
         }
     }
+    /**
+     * Gets a show.
+     *
+     * @param      movieName  The movie name
+     * @param      date       The date
+     *
+     * @return     A show.
+     */
     public Show getAShow(String movieName, String date) {
         if (allShowsCount == 0) {
             System.out.println("No show");
@@ -75,6 +106,9 @@ class BookYourShow {
         }
         return null;
     }
+    /**
+     * Shows all Shows.
+     */
     public void showAll() {
         for (int i = 0; i < allShowsCount; i++) {
             String st = allShows[i].movieName + "," + allShows[i].date + ",";
@@ -90,11 +124,20 @@ class BookYourShow {
         }
     }
 }
-
+/**
+ * Class for show.
+ */
 class Show {
     public String movieName;
     public String date;
     public String[] seats;
+    /**
+     * Constructs the object.
+     *
+     * @param      movieName  The movie name
+     * @param      date       The date
+     * @param      seats      The seats
+     */
     Show(String movieName, String date, String[] seats) {
         this.movieName = movieName;
         this.date = date;
@@ -102,10 +145,18 @@ class Show {
 
     }
 }
-
+/**
+ * Class for patron.
+ */
 class Patron {
     public String personName;
     public String phno;
+    /**
+     * Constructs the object.
+     *
+     * @param      personName  The person name
+     * @param      phno        The phno
+     */
     Patron(String personName, String phno) {
         this.personName = personName;
         this.phno = phno;
