@@ -77,7 +77,7 @@ class Question {
      */
     public String getCorrectAnswer() {
         //return this.correctAnswer;
-        return this.correctAnswer+"";
+        return this.correctAnswer + "";
     }
     /**
      * Gets the question text.
@@ -120,8 +120,8 @@ class Question {
     public void setResponse(final String answer) {
         this.response = answer;
     }
-    
-    
+
+
     /**
      * Returns a string representation of the object.
      *
@@ -132,13 +132,15 @@ class Question {
         s = s + getQuestionText();
         s = s + "(" + getMaxMarks() + ")" + "\n";
         for (int i = 0; i < choices.length; i++) {
-            if(i != 0) {    
-            s = s + "\t" + choices[i];
+            if (i != 0) {
+                s = s + "\t" + choices[i];
             } else {
                 s = s + choices[i];
             }
+            if ( i < choices.length - 1) {
+                s = s + "\n";
+            }
         }
-        s= s + "\n";
         return s;
     }
 
