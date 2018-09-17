@@ -132,12 +132,14 @@ class Question {
         s = s + getQuestionText();
         s = s + "(" + getMaxMarks() + ")" + "\n";
         for (int i = 0; i < choices.length; i++) {
+            int j = i;
+            j++;
             if (i != 0) {
                 s = s + "\t" + choices[i];
             } else {
                 s = s + choices[i];
             }
-            if ( i < choices.length - 1) {
+            if ( j == choices.length - 1) {
                 s = s + "\n";
             }
         }
