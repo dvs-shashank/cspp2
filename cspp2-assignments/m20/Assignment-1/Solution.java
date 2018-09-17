@@ -221,7 +221,7 @@ class Quiz {
             }
         }
         //s = s + "\n";
-        s = s + "Total score: " + totalScore;
+        s = s + "Total Score: " + totalScore;
         //evaluateResponse(getResponse());
         return s;
     }
