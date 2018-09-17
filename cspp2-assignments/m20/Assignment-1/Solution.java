@@ -138,6 +138,7 @@ class Question {
                 s = s + choices[i];
             }
         }
+        s= s + "\n";
         return s;
     }
 
