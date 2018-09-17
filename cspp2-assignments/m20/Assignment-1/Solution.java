@@ -62,7 +62,7 @@ class Question {
     public boolean evaluateResponse() {
         //System.out.println(response.substring(7));
         //System.out.println(this.correctAnswer);
-        if (response.substring(7).equals(this.correctAnswer)) {
+        if (response.substring(7).equals(this.getCorrectAnswer())) {
             // System.out.println("shashank");
             //System.out.println("Correct Answer " + "Marks Awarded: " + getMaxMarks());
             return true;
@@ -211,7 +211,7 @@ class Quiz {
             if (b == true) {
                 int marks = questions[i].getMaxMarks();
                 totalScore += calculateScore(marks);
-                System.out.println("sha");
+                //System.out.println("sha");
                 s = s + " Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks() + "\n";
             } else {
                 int marks = questions[i].getPenalty();
