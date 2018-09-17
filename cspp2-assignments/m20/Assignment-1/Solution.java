@@ -212,7 +212,7 @@ class Quiz {
                 int marks = questions[i].getMaxMarks();
                 totalScore += calculateScore(marks);
                 //System.out.println("sha");
-                s = s + " Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks() + "\n";
+                System.out.println(" Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks());
             } else {
                 int marks = questions[i].getPenalty();
                 totalScore += calculateScore(marks);

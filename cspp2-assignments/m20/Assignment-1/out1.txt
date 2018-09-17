@@ -6,30 +6,26 @@
 | Start Quiz |
 |------------|
 question text 1(1)
-	choice 1	choice 2	choice 3	choice 4
+choice 1	choice 2	choice 3	choice 4
+
 question text 2(2)
-	choice 1	choice 2	choice 3	choice 4
+choice 1	choice 2	choice 3	choice 4
+
 question text 3(3)
-	choice 1	choice 2	choice 3	choice 4
+choice 1	choice 2	choice 3	choice 4
+
 question text 4(4)
-	choice 1	choice 2	choice 3	choice 4
+choice 1	choice 2	choice 3	choice 4
+
 |--------------|
 | Score Report |
 |--------------|
 question text 1
-1
-3
-Wrong Answer- Penalty!: -4
+ Correct Answer! - Marks Awarded: 1
 question text 2
-2
-1
-Wrong Answer- Penalty!: -3
+ Correct Answer! - Marks Awarded: 2
 question text 3
-4
-2
-Wrong Answer- Penalty!: -2
+ Correct Answer! - Marks Awarded: 3
 question text 4
-3
-4
-Wrong Answer- Penalty!: -1
-Total score: -10
+ Correct Answer! - Marks Awarded: 4
+Total Score: 10
