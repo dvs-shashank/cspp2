@@ -211,7 +211,7 @@ class Quiz {
 				int marks = questions[i].getPenalty();
 				totalScore += calculateScore(marks);
 				//System.out.println("shank");
-				System.out.println("Wrong Answer- Penalty!: " + questions[i].getPenalty());
+				System.out.println("Wrong Answer! - Penalty: " + questions[i].getPenalty());
 			}
 		}
 		//s = s + "\n";
