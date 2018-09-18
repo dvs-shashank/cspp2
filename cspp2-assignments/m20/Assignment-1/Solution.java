@@ -312,7 +312,7 @@ public final class Solution {
         for (int i = 0; i < q; i++) {
             System.out.println(quiz.getQuestion(i));
             String responseFromUser = scan.nextLine();
-            System.out.println(responseFromUser);
+            //System.out.println(responseFromUser);
             /*String[] in = responseFromUser.split(" ");
             System.out.println(in[0]);
             System.out.println(in[1]);
