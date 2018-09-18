@@ -62,7 +62,8 @@ class Question {
     public boolean evaluateResponse() {
         //System.out.println(response.substring(7));
         //System.out.println(this.correctAnswer);
-        if (response.substring(7).equals(this.getCorrectAnswer())) {
+        String[] in = response.split(" ");
+        if (in[1].equals(this.getCorrectAnswer())) {
             // System.out.println("shashank");
             //System.out.println("Correct Answer " + "Marks Awarded: " + getMaxMarks());
             return true;
@@ -132,17 +133,15 @@ class Question {
         s = s + getQuestionText();
         s = s + "(" + getMaxMarks() + ")" + "\n";
         for (int i = 0; i < choices.length; i++) {
-            
+
             if (i != 0) {
                 s = s + "\t" + choices[i];
             } else {
                 s = s + choices[i];
             }
-            
         }
         return s + "\n";
     }
-
 }
 /**
  * Class for quiz.
@@ -313,6 +312,21 @@ public final class Solution {
         for (int i = 0; i < q; i++) {
             System.out.println(quiz.getQuestion(i));
             String responseFromUser = scan.nextLine();
+            System.out.println(responseFromUser);
+            /*String[] in = responseFromUser.split(" ");
+            System.out.println(in[0]);
+            System.out.println(in[1]);
+            //System.out.println(responseFromUser.substring(6));
+            if (responseFromUser.substring(6) == null) {
+                responseFromUser = "1";
+            } else if (responseFromUser.substring(6) == null) {
+                responseFromUser = "2";
+            } else if (in[1].equals("c")) {
+                // System.out.println("Hello");
+                responseFromUser = "3";
+            } else if (responseFromUser.substring(6) == null) {
+                responseFromUser = "4";
+            }*/
             quiz.questions[i].setResponse(responseFromUser);
             // Question responses = new Question();
             // responses.setResponse(responseFromUser);
