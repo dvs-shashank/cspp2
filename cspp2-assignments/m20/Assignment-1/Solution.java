@@ -174,7 +174,11 @@ class Quiz {
     public Question getQuestion(final int index) {
         return questions[index];
     }
-
+    /**
+     * Gets the questions.
+     *
+     * @return     The questions.
+     */
     public Question[] getQuestions() {
         // System.out.println(Arrays.toString(Arrays.copyOf(questions, size)));
         return Arrays.copyOf(questions, size);
