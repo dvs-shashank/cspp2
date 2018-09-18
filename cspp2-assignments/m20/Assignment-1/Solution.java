@@ -62,8 +62,8 @@ class Question {
     public boolean evaluateResponse() {
         //System.out.println(response.substring(7));
         //System.out.println(this.correctAnswer);
-        //String[] in = response.split(" ");
-        if (response.equals(this.getCorrectAnswer())) {
+        String[] in = response.split(" ");
+        if (in[1].equals(this.getCorrectAnswer())) {
             // System.out.println("shashank");
             //System.out.println("Correct Answer " + "Marks Awarded: " + getMaxMarks());
             return true;
