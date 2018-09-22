@@ -39,7 +39,7 @@ class Todoist {
 	}
 	public Task getNextTask(String name) {
 		String str = name;
-		for (int i = 1; i < size; i++) {
+		for (int i = 0; i < size; i++) {
 			if (task[i].getAssignedTo().equals(name) && task[i].getStatus().equals("todo")
 			        && task[i].getImportant() == true && task[i].getUrgent() == false) {
 				task[i].setAssignTo(str);
