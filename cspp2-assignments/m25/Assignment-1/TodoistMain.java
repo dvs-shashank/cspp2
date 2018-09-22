@@ -24,6 +24,7 @@ class Task {
 	private boolean important;
 	private boolean urgent;
 	private String status;
+	private int flag;
 
 	/**
 	 * Constructs the object.
@@ -37,6 +38,7 @@ class Task {
 	 */
 	Task(final String title, final String assignedTo, final int timeToComplete,
 	     final boolean important, final boolean urgent, final String status) {
+		flag = 0;
 		try {
 			if (title != null) {
 				this.title = title;
@@ -45,6 +47,7 @@ class Task {
 			}
 		} catch (Exception e) {
 			System.out.println("Title not provided");
+			flag = 1;
 		}
 		this.assignedTo = assignedTo;
 		try {
@@ -56,6 +59,7 @@ class Task {
 		}
 		catch(Exception e) {
 			System.out.println("Invalid timeToComplete "+timeToComplete);
+			flag = 1;
 		}
 		this.important = important;
 		this.urgent = urgent;
@@ -67,6 +71,7 @@ class Task {
 			}
 		}
 		catch(Exception e) {
+			flag = 1;
 			System.out.println("Invalid status "+status);
 			return ;
 		}
@@ -95,8 +100,10 @@ class Task {
 		} else {
 			urg = "Not Urgent";
 		}
-		str += title + cmm + assignedTo + cmm + timeToComplete + cmm
+		if (flag != 1) {
+			str += title + cmm + assignedTo + cmm + timeToComplete + cmm
 		       + imp + cmm + urg + cmm + status ;
+		}
 		return str;
 	}
 }
