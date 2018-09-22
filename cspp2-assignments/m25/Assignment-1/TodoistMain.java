@@ -55,8 +55,20 @@ class Task {
 	public  String toString() {
 		String str = "";
 		String cmm = ", ";
+		String imp = "";
+		String urg = "";
+		if (this.important == true) {
+			imp = "Important";
+		} else {
+			imp = "Not Important";
+		}
+		if (this.urgent == true) {
+			imp = "Urgent";
+		} else {
+			imp = "Not Urgent";
+		}
 		str += title + cmm + assignedTo + cmm + timeToComplete + cmm
-		+important + cmm + urgent + cmm + status ;
+		+ imp + cmm + urg + cmm + status ;
 		return str;
 	}
 }
