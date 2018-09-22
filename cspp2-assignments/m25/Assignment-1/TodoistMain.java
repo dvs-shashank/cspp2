@@ -6,13 +6,28 @@ import java.util.Arrays;
 class Todoist {
 	private Task[] task;
 	private int size;
+	/**
+	 * Constructs the object.
+	 */
 	Todoist() {
 		task = new Task[40];
 		size = 0;
 	}
+
+	/**
+	 * Adds a task.
+	 *
+	 * @param      taskobj  The taskobj
+	 */
 	public void addTask(Task taskobj) {
 		task[size++] = taskobj;
 	}
+
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		String str = "";
 		String cmm = ", ";
@@ -37,6 +52,14 @@ class Todoist {
 		}
 		return str;
 	}
+
+	/**
+	 * Gets the next task.
+	 *
+	 * @param      name  The name
+	 *
+	 * @return     The next task.
+	 */
 	public Task getNextTask(String name) {
 		String str = name;
 		for (int i = 0; i < size; i++) {
@@ -49,14 +72,28 @@ class Todoist {
 				task[i].setAssignTo(str);
 				return task[i];
 			}
-
 		}
 		return null;
 	}
+
+	/**
+	 * Gets the next task.
+	 *
+	 * @param      name   The name
+	 * @param      count  The count
+	 *
+	 * @return     The next task.
+	 */
 	public Task[] getNextTask(String name, int count) {
 		task = new Task[count];
 		return task;
 	}
+
+	/**
+	 * { function_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public int totalTime4Completion() {
 		int totalTime = 0;
 		for (int i = 0; i < size; i++) {
@@ -68,6 +105,10 @@ class Todoist {
 	}
 
 }
+
+/**
+ * Class for task.
+ */
 class Task {
 	private String title;
 	private String assignedTo;
@@ -125,24 +166,66 @@ class Task {
 			//return ;
 		}
 	}
+
+	/**
+	 * Sets the assign to.
+	 *
+	 * @param      assignedTo  The assigned to
+	 */
 	public void setAssignTo(String assignedTo) {
 		this.assignedTo = assignedTo;
 	}
+
+	/**
+	 * Gets the title.
+	 *
+	 * @return     The title.
+	 */
 	public String getTitle() {
 		return this.title;
 	}
+
+	/**
+	 * Gets the assigned to.
+	 *
+	 * @return     The assigned to.
+	 */
 	public String getAssignedTo() {
 		return this.assignedTo;
 	}
+
+	/**
+	 * Gets the time to complete.
+	 *
+	 * @return     The time to complete.
+	 */
 	public int getTimeToComplete() {
 		return this.timeToComplete;
 	}
+
+	/**
+	 * Gets the important.
+	 *
+	 * @return     The important.
+	 */
 	public boolean getImportant() {
 		return this.important;
 	}
+
+	/**
+	 * Gets the urgent.
+	 *
+	 * @return     The urgent.
+	 */
 	public boolean getUrgent() {
 		return this.urgent;
 	}
+
+	/**
+	 * Gets the status.
+	 *
+	 * @return     The status.
+	 */
 	public String getStatus() {
 		return this.status;
 	}
@@ -278,3 +361,4 @@ public class TodoistMain {
 		startTest();
 	}
 }
+
