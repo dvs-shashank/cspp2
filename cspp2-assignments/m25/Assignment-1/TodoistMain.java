@@ -4,6 +4,37 @@ import java.util.Arrays;
  * Class for task.
  */
 class Todoist {
+	private Task[] task;
+	private int size;
+	Todoist() {
+		task = new Task[40];
+		size = 0;
+	}
+	public void addTask(Task taskobj) {
+		task[size++] = taskobj;
+	}
+	public String toString() {
+		String str = "";
+		String cmm =", ";
+		for (int i = 0; i < size; i++) {
+			String urg = "";
+			String imp = "";
+			if (task[i].getImportant() == true) {
+				imp = "Important";
+			} else {
+				imp = "Not Important";
+			}
+			if (task[i].getImportant() == true) {
+				urg = "Urgent";
+			} else {
+				urg = "Not Urgent";
+			}
+
+			str += task[i].getTitle() + cmm + task[i].getAssignedTo() + cmm + task[i].getTimeToComplete() + cmm
+			       + imp + cmm + urg + cmm + task[i].getStatus() +"\n" ;
+		}
+		return str;
+	}
 	public String getNextTask(String x) {
 		return null;
 	}
@@ -13,9 +44,7 @@ class Todoist {
 	public int totalTime4Completion() {
 		return -1;
 	}
-	public void addTask(Task taskobj) {
-		//return null;
-	}
+
 }
 class Task {
 	private String title;
@@ -71,10 +100,29 @@ class Task {
 		} catch (Exception e) {
 			flag = 1;
 			System.out.println("Invalid status " + status);
-			return ;
+			//return ;
 		}
 
 	}
+	public String getTitle() {
+		return this.title;
+	}
+	public String getAssignedTo() {
+		return this.assignedTo;
+	}
+	public int getTimeToComplete() {
+		return this.timeToComplete;
+	}
+	public boolean getImportant() {
+		return this.important;
+	}
+	public boolean getUrgent() {
+		return this.urgent;
+	}
+	public String getStatus() {
+		return this.status;
+	}
+
 
 	/**
 	 * Returns a string representation of the object.
