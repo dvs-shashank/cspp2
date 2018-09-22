@@ -24,7 +24,7 @@ class Todoist {
 			} else {
 				imp = "Not Important";
 			}
-			if (task[i].getImportant() == true) {
+			if (task[i].getUrgent() == true) {
 				urg = "Urgent";
 			} else {
 				urg = "Not Urgent";
