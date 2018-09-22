@@ -44,21 +44,19 @@ class Task {
 		this.urgent = urgent;
 		this.status = status;
 	}
+
 	/**
 	 * Returns a string representation of the object.
 	 *
-	 * @param      tokens  The tokens
+	 * @param      task  The task
 	 *
 	 * @return     String representation of the object.
 	 */
-	public String toString(final String[] tokens) {
+	public  String toString() {
 		String str = "";
-		for (int i = 0; i < tokens.length; i++) {
-			str += tokens[i];
-			if (i < tokens.length - 1) {
-				str += ",";
-			}
-		}
+		String cmm = ", ";
+		str += title + cmm + assignedTo + cmm + timeToComplete + cmm
+		+important + cmm + urgent + cmm + status ;
 		return str;
 	}
 }
@@ -127,6 +125,7 @@ public class TodoistMain {
 	 */
 	public static void testTask(final String[] tokens) {
 		try {
+			//System.out.println("hi");
 			System.out.println(createTask(tokens));
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
