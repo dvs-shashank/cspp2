@@ -96,9 +96,9 @@ class Todoist {
 	}
 
 	/**
-	 * { function_description }
+	 * { function_description }.
 	 *
-	 * @return     { description_of_the_return_value }
+	 * @return     { description_of_the_return_value }.
 	 */
 	public int totalTime4Completion() {
 		int totalTime = 0;
@@ -117,31 +117,31 @@ class Todoist {
  */
 class Task {
 	/**
-	 * { title }
+	 * { title }.
 	 */
 	private String title;
 	/**
-	 * { assignedTo }
+	 * { assignedTo }.
 	 */
 	private String assignedTo;
 	/**
-	 * { timeToComplete }
+	 * { timeToComplete }.
 	 */
 	private int timeToComplete;
 	/**
-	 * { important }
+	 * { important }.
 	 */
 	private boolean important;
 	/**
-	 * { urgent }
+	 * { urgent }.
 	 */
 	private boolean urgent;
 	/**
-	 * { status }
+	 * { status }.
 	 */
 	private String status;
 	/**
-	 * { flag }
+	 * { flag }.
 	 */
 	private int flag;
 
