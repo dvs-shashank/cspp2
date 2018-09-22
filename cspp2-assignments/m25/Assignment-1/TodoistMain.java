@@ -15,7 +15,7 @@ class Todoist {
 	}
 	public String toString() {
 		String str = "";
-		String cmm =", ";
+		String cmm = ", ";
 		for (int i = 0; i < size; i++) {
 			String urg = "";
 			String imp = "";
@@ -32,19 +32,41 @@ class Todoist {
 			str += task[i].getTitle() + cmm + task[i].getAssignedTo() + cmm + task[i].getTimeToComplete() + cmm
 			       + imp + cmm + urg + cmm + task[i].getStatus();
 			if (i < size - 1) {
-				str += "\n"; 
+				str += "\n";
 			}
 		}
 		return str;
 	}
-	public String getNextTask(String x) {
+	public Task getNextTask(String name) {
+		String str = name;
+		for (int i = 0; i < size; i++) {
+			// for (int j = 0; j <  ; ) {
+
+			// }
+			if (task[i].getAssignedTo().equals(name) && task[i].getStatus().equals("todo")
+			        && task[i].getImportant() == true && task[i].getUrgent() == false) {
+				task[i].setAssignTo(str);
+				return task[i];
+			} else if (task[i].getAssignedTo().equals(name) && task[i].getStatus().equals("todo")
+			           && task[i].getImportant() == true && task[i].getUrgent() == true) {
+				task[i].setAssignTo(str);
+				return task[i];
+			}
+
+		}
 		return null;
 	}
 	public Task[] getNextTask(String x, int y) {
 		return null;
 	}
 	public int totalTime4Completion() {
-		return -1;
+		int totalTime = 0;
+		for (int i = 0; i < size; i++) {
+			if (task[i].getStatus().equals("todo")) {
+				totalTime += task[i].getTimeToComplete();
+			}
+		}
+		return totalTime;
 	}
 
 }
@@ -104,7 +126,9 @@ class Task {
 			System.out.println("Invalid status " + status);
 			//return ;
 		}
-
+	}
+	public void setAssignTo(String assignedTo) {
+		this.assignedTo = assignedTo;
 	}
 	public String getTitle() {
 		return this.title;
