@@ -40,42 +40,40 @@ class Task {
 	     final boolean important, final boolean urgent, final String status) {
 		flag = 0;
 		try {
-			if (title != null) {
+			if (!title.equals("")) {
 				this.title = title;
 			} else {
+				flag = 1;
 				throw new Exception();
 			}
 		} catch (Exception e) {
 			System.out.println("Title not provided");
-			flag = 1;
 		}
 		this.assignedTo = assignedTo;
 		try {
 			if (timeToComplete > 0) {
-			this.timeToComplete = timeToComplete;
+				this.timeToComplete = timeToComplete;
 			} else {
 				throw new Exception();
 			}
-		}
-		catch(Exception e) {
-			System.out.println("Invalid timeToComplete "+timeToComplete);
+		} catch (Exception e) {
+			System.out.println("Invalid timeToComplete " + timeToComplete);
 			flag = 1;
 		}
 		this.important = important;
 		this.urgent = urgent;
 		try {
 			if (status.equals("todo") || status.equals("done")) {
-			this.status = status;		
+				this.status = status;
 			} else {
 				throw new Exception();
 			}
-		}
-		catch(Exception e) {
+		} catch (Exception e) {
 			flag = 1;
-			System.out.println("Invalid status "+status);
+			System.out.println("Invalid status " + status);
 			return ;
 		}
-		
+
 	}
 
 	/**
@@ -102,7 +100,7 @@ class Task {
 		}
 		if (flag != 1) {
 			str += title + cmm + assignedTo + cmm + timeToComplete + cmm
-		       + imp + cmm + urg + cmm + status ;
+			       + imp + cmm + urg + cmm + status ;
 		}
 		return str;
 	}
