@@ -19,7 +19,7 @@ class Todoist {
 	 *
 	 * @param      taskobj  The taskobj
 	 */
-	public void addTask(Task taskobj) {
+	public void addTask(final Task taskobj) {
 		task[size++] = taskobj;
 	}
 
@@ -60,7 +60,7 @@ class Todoist {
 	 *
 	 * @return     The next task.
 	 */
-	public Task getNextTask(String name) {
+	public Task getNextTask(final String name) {
 		String str = name;
 		for (int i = 0; i < size; i++) {
 			if (task[i].getAssignedTo().equals(name) && task[i].getStatus().equals("todo")
@@ -84,7 +84,7 @@ class Todoist {
 	 *
 	 * @return     The next task.
 	 */
-	public Task[] getNextTask(String name, int count) {
+	public Task[] getNextTask(final String name, final int count) {
 		task = new Task[count];
 		return task;
 	}
@@ -110,12 +110,33 @@ class Todoist {
  * Class for task.
  */
 class Task {
+	/**
+	 * { title }
+	 */
 	private String title;
+	/**
+	 * { assignedTo }
+	 */
 	private String assignedTo;
+	/**
+	 * { timeToComplete }
+	 */
 	private int timeToComplete;
+	/**
+	 * { important }
+	 */
 	private boolean important;
+	/**
+	 * { urgent }
+	 */
 	private boolean urgent;
+	/**
+	 * { status }
+	 */
 	private String status;
+	/**
+	 * { flag }
+	 */
 	private int flag;
 
 	/**
@@ -172,7 +193,7 @@ class Task {
 	 *
 	 * @param      assignedTo  The assigned to
 	 */
-	public void setAssignTo(String assignedTo) {
+	public void setAssignTo(final String assignedTo) {
 		this.assignedTo = assignedTo;
 	}
 
