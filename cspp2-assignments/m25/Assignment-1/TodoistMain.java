@@ -231,10 +231,9 @@ class Task {
 	}
 
 
+
 	/**
 	 * Returns a string representation of the object.
-	 *
-	 * @param      task  The task
 	 *
 	 * @return     String representation of the object.
 	 */
