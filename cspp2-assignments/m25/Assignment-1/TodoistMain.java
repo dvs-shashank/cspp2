@@ -29,9 +29,11 @@ class Todoist {
 			} else {
 				urg = "Not Urgent";
 			}
-
 			str += task[i].getTitle() + cmm + task[i].getAssignedTo() + cmm + task[i].getTimeToComplete() + cmm
-			       + imp + cmm + urg + cmm + task[i].getStatus() +"\n" ;
+			       + imp + cmm + urg + cmm + task[i].getStatus();
+			if (i < size - 1) {
+				str += "\n"; 
+			}
 		}
 		return str;
 	}
