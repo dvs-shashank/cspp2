@@ -39,10 +39,7 @@ class Todoist {
 	}
 	public Task getNextTask(String name) {
 		String str = name;
-		for (int i = 0; i < size; i++) {
-			// for (int j = 0; j <  ; ) {
-
-			// }
+		for (int i = 1; i < size; i++) {
 			if (task[i].getAssignedTo().equals(name) && task[i].getStatus().equals("todo")
 			        && task[i].getImportant() == true && task[i].getUrgent() == false) {
 				task[i].setAssignTo(str);
@@ -56,8 +53,9 @@ class Todoist {
 		}
 		return null;
 	}
-	public Task[] getNextTask(String x, int y) {
-		return null;
+	public Task[] getNextTask(String name, int count) {
+		task = new Task[count] ;
+		return task;
 	}
 	public int totalTime4Completion() {
 		int totalTime = 0;
