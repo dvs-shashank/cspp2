@@ -63,9 +63,9 @@ class Task {
 			imp = "Not Important";
 		}
 		if (this.urgent == true) {
-			imp = "Urgent";
+			urg = "Urgent";
 		} else {
-			imp = "Not Urgent";
+			urg = "Not Urgent";
 		}
 		str += title + cmm + assignedTo + cmm + timeToComplete + cmm
 		+ imp + cmm + urg + cmm + status ;
