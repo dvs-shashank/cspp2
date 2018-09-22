@@ -55,6 +55,9 @@ class Todoist {
 	}
 	public Task[] getNextTask(String name, int count) {
 		task = new Task[count] ;
+		for (int i = 0; i < count ; i++) {
+			System.out.print(task[i]);
+		}
 		return task;
 	}
 	public int totalTime4Completion() {
