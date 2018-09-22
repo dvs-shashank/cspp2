@@ -37,12 +37,40 @@ class Task {
 	 */
 	Task(final String title, final String assignedTo, final int timeToComplete,
 	     final boolean important, final boolean urgent, final String status) {
-		this.title = title;
+		try {
+			if (title != null) {
+				this.title = title;
+			} else {
+				throw new Exception();
+			}
+		} catch (Exception e) {
+			System.out.println("Title not provided");
+		}
 		this.assignedTo = assignedTo;
-		this.timeToComplete = timeToComplete;
+		try {
+			if (timeToComplete > 0) {
+			this.timeToComplete = timeToComplete;
+			} else {
+				throw new Exception();
+			}
+		}
+		catch(Exception e) {
+			System.out.println("Invalid timeToComplete "+timeToComplete);
+		}
 		this.important = important;
 		this.urgent = urgent;
-		this.status = status;
+		try {
+			if (status.equals("todo") || status.equals("done")) {
+			this.status = status;		
+			} else {
+				throw new Exception();
+			}
+		}
+		catch(Exception e) {
+			System.out.println("Invalid status "+status);
+			return ;
+		}
+		
 	}
 
 	/**
@@ -68,7 +96,7 @@ class Task {
 			urg = "Not Urgent";
 		}
 		str += title + cmm + assignedTo + cmm + timeToComplete + cmm
-		+ imp + cmm + urg + cmm + status ;
+		       + imp + cmm + urg + cmm + status ;
 		return str;
 	}
 }
